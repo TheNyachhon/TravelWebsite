@@ -28,6 +28,16 @@ export class AppComponent {
   isCollapsed = false;
 
 
+  // line under navigation items
+  underlineVal = 0;
+  showUnderline(index:number){
+    this.underlineVal = index;
+  }
+  hideUnderline(){
+    this.underlineVal = 0;
+  }
+
+
   // navbar scroll
   @HostListener('window:scroll', ['$event'])
 

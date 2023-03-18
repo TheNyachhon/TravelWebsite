@@ -52,13 +52,34 @@ nav{
     padding: 10px !important;
     transition:500ms all;
 }
-.nav-link:hover{
-    text-decoration: underline;
-}
 .nav-link.active{
     background: rgba(255, 0, 0, 0.2) !important;
     box-shadow: 0 8px 32px 0 rgba(178, 178, 185, 0.2);
     backdrop-filter: blur(9px);
     -webkit-backdrop-filter: blur(9px);
     border-radius: 10px;
+}
+
+/* navigation underline */
+.navUnderline{
+    position: absolute;
+    height: 5px;
+    background-color: #FFFF55;
+    border-radius: 11% 89% 88% 12% / 48% 25% 75% 52%;
+    animation-name:popUp;
+    animation-duration: 500ms;
+}
+@keyframes popUp {
+    0%{
+        transform: scale(0.5);
+    }
+}
+.destination{
+    width:8%;
+}
+.festival{
+    width:12%;
+}
+.travel{
+    width:8%;
 }
