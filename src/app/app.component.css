@@ -47,19 +47,9 @@ nav{
     transform: translateY(-15px);
     transition: 200ms transform;
 }
-
-.nav-link{
-    padding: 10px !important;
-    transition:500ms all;
+#navbarNav{
+    position: relative;
 }
-.nav-link.active{
-    background: rgba(255, 0, 0, 0.2) !important;
-    box-shadow: 0 8px 32px 0 rgba(178, 178, 185, 0.2);
-    backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(9px);
-    border-radius: 10px;
-}
-
 /* navigation underline */
 .navUnderline{
     position: absolute;
