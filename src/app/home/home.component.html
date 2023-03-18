@@ -1,0 +1,154 @@
+<!-- Alert -->
+<p class="d-flex justify-content-end position-absolute w-100 p-3">
+    <ngb-alert class="w-25" type="danger">
+        <b>Weather Alert!</b>
+        <hr>
+        <p>
+            The country is facing adverse weather right now.
+            Please go through our travel tips to ensure you are fully stocked!
+        </p>
+    </ngb-alert>
+</p>
+<div class="container-fluid home text-center">
+    <!-- background image and overlay -->
+    <div class="backgroundImage" [ngStyle]="{'background-image':'url('+images[1]+')'}"></div>
+    <div class="overlay"></div>
+    <!--  -->
+    <div class="title h-100 d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 class="display-1">Visit Nepal</h1>
+        <h1 class="display-4">2023</h1>
+    </div>
+    <!-- Explore -->
+    <div class="lead explore d-flex flex-column justify-content-center align-items-center">
+        <div>
+            <a href="#info">
+                explore
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
+        <div></div>
+    </div>
+</div>
+<div class="homePageTransition"></div>
+<!-- The Nepal Experience -->
+<section id="info">
+    <div class="container text-center">
+        <div class="row content">
+            <div class="col">
+                <div class="row mb-5">
+                    <h1 class="display-6 m-0">The Nepal Experience</h1>
+                    <div class="underline"></div>
+                </div>
+                <div class="row">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit molestias libero atque in eius,
+                        praesentium a voluptatum cum laborum accusamus amet corrupti, labore tempore animi illo
+                        consequatur
+                        mollitia quasi similique?
+                    </p>
+                </div>
+            </div>
+            <div class="col image" [ngStyle]="{'background-image':'url('+images[7]+')'}"></div>
+        </div>
+    </div>
+</section>
+<!-- Festivals -->
+<div class="backgroundDesign"></div>
+<div class="backgroundDesign2"></div>
+<section id="festives">
+    <div class="container text-center">
+        <div class="row content">
+            <div class="col image" [ngStyle]="{'background-image':'url('+images[12]+')'}"></div>
+            <div class="col">
+                <div class="row mb-5">
+                    <h1 class="display-6 m-0">The Festives</h1>
+                    <div class="underline"></div>
+                </div>
+                <div class="row">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit molestias libero atque in eius,
+                        praesentium a voluptatum cum laborum accusamus amet corrupti, labore tempore animi illo
+                        consequatur
+                        mollitia quasi similique?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Gallery -->
+<div class="backgroundDesign3"></div>
+<div class="backgroundDesign4"></div>
+<section id="gallery">
+    <div class="container text-center">
+        <div class="row content mb-5">
+            <div class="col">
+                <div class="row">
+                    <h1 class="display-6 m-0">Gallery</h1>
+                    <div class="underline"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row content">
+            <!-- <div class="col image" [ngStyle]="{'background-image':'url('+images[11]+')'}"></div> -->
+            <ngb-carousel class="carousel carousel-dark slide">
+                <ng-template ngbSlide>
+                    <div class="picsum-img-wrapper">
+                        <img [src]="images[0]" alt="Aerial View of KTM" />
+                    </div>
+                    <div class="carousel-caption text-light">
+                        <h3>Aerial View of KTM</h3>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="picsum-img-wrapper">
+                        <img [src]="images[1]" alt="Boudhanath Stupa" />
+                    </div>
+                    <div class="carousel-caption text-light">
+                        <h3>Boudhanath stupa</h3>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="picsum-img-wrapper">
+                        <img [src]="images[6]" alt="MangalBaazar, Patan" />
+                    </div>
+                    <div class="carousel-caption text-light">
+                        <h3>MangalBazaar, Patan</h3>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+</section>
+<footer class="container-fluid d-flex flex-column justify-content-center align-items-center">
+    <div class="footerBGImage" [ngStyle]="{'background-image':'url('+images[8]+')'}"></div>
+    <div class="footerBGoverlay"></div>
+    <div class="container text-center">
+        <div class="row content d-flex flex-column justify-content-center align-items-center">
+            <div class="row">
+                <h3 class="display-6 text-light">Subscribe to our newsletter</h3>
+            </div>
+            <div class="row w-50">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">
+                        <i class="fa-solid fa-at"></i>
+                    </span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-lg">
+                </div>
+            </div>
+            <button class="btn btn-success w-25 m-2">Subscribe!</button>
+        </div>
+    </div>
+    <div class="container socialMedia text-center w-25 p-0 d-flex justify-content-between align-items-center">
+        <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+    </div>
+</footer>

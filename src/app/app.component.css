@@ -1,0 +1,64 @@
+nav{
+    background:none !important;
+    z-index: 9999;
+}
+.navbar-brand{
+    margin-left: 30px;
+}
+.navbar-nav li{
+    margin:0 60px !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+/* Once scrolled */
+/* transparent nav bar */
+.transparentNav{
+    background: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 32px 0 rgba(178, 178, 185, 0.2);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+}
+.scrolled {
+    position: sticky;
+    top: 0;
+    animation-name: PopUp;
+    animation-duration: 200ms;
+}
+/* navbar text color when at home */
+.navbar-dark a{
+    color: white !important;
+}
+/* navbar text color when scrolled down */
+.navbar-light a{
+    color: black !important;
+}
+
+@keyframes PopUp {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.scrollUp {
+    transform: translateY(-15px);
+    transition: 200ms transform;
+}
+
+.nav-link{
+    padding: 10px !important;
+    transition:500ms all;
+}
+.nav-link:hover{
+    text-decoration: underline;
+}
+.nav-link.active{
+    background: rgba(255, 0, 0, 0.2) !important;
+    box-shadow: 0 8px 32px 0 rgba(178, 178, 185, 0.2);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 10px;
+}
