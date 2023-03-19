@@ -1,7 +1,8 @@
 <nav class="navbar navbar-dark bg-light navbar-expand-lg bg-body-tertiary w-100" (scroll)="onWindowScroll()">
   <div class="container-fluid">
 
-    <a class="navbar-brand" routerLinkActive="active" routerLink="/" placement="bottom" ngbTooltip="Home">
+    <a class="navbar-brand" routerLinkActive="active" routerLink="/" placement="bottom" ngbTooltip="Home"
+      (click)="activeNavLink(0)">
       <img src="../assets/nepal.png" alt="Home" [ngStyle]="{'width':'35px'}">
     </a>
 
@@ -18,7 +19,7 @@
       <ul class="navbar-nav w-100 d-flex justify-content-end">
         <li class="nav-item m-1">
           <a class="nav-link p-1" routerLinkActive="active" routerLink="/Destinations" (mouseenter)="showUnderline(1)"
-            (mouseleave)="hideUnderline()">
+            (mouseleave)="hideUnderline(1)">
             Destinations</a>
           <div *ngSwitchCase="1">
             <div class="navUnderline destination"></div>
@@ -26,14 +27,14 @@
         </li>
         <li class="nav-item m-1">
           <a class="nav-link p-1" routerLinkActive="active" routerLink="/Festivals" (mouseenter)="showUnderline(2)"
-            (mouseleave)="hideUnderline()">Festivals & Events</a>
+            (mouseleave)="hideUnderline(2)">Festivals & Events</a>
           <div *ngSwitchCase="2">
             <div class="navUnderline festival"></div>
           </div>
         </li>
         <li class="nav-item m-1">
           <a class="nav-link p-1" routerLinkActive="active" routerLink="/TravelTips" (mouseenter)="showUnderline(3)"
-            (mouseleave)="hideUnderline()">Travel Tips</a>
+            (mouseleave)="hideUnderline(3)">Travel Tips</a>
           <div *ngSwitchCase="3">
             <div class="navUnderline travel"></div>
           </div>

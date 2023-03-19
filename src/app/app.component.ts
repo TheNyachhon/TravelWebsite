@@ -1,11 +1,11 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'TravelWebsite';
 
   //images
@@ -29,15 +29,40 @@ export class AppComponent {
 
 
   // line under navigation items
-  underlineVal = 0;
-  showUnderline(index:number){
+  underlineVal = 0;  //0 means no underline
+  showUnderline(index: number) {
     this.underlineVal = index;
   }
-  hideUnderline(){
-    this.underlineVal = 0;
+  hideUnderline(index: number) {
+    let navLinks = document.getElementsByClassName('nav-link');
+    // checks if any other nav links have active class
+    let i = this.checkForActiveLink();
+    //checks if the nav link has active class
+    if (!navLinks[index - 1].classList.contains('active')) {
+      // it does not have active link, hence the underline is hidden
+      this.underlineVal = 0;
+    }
+    this.underlineVal = i;
   }
 
+  checkForActiveLink() :number{
+    let navLinks = document.getElementsByClassName('nav-link');
+    for (let i = 0; i < 4; i++) {
+      if (navLinks[i].classList.contains('active')) {
+        return (i+1);
+      }
+    }
+    return 0;
+  }
 
+  // navbar active
+  activeNavLink(index: number) {
+    this.showUnderline(index);
+  }
+
+  ngOnInit(): void {
+
+  }
   // navbar scroll
   @HostListener('window:scroll', ['$event'])
 
@@ -52,6 +77,8 @@ export class AppComponent {
       navBar.classList.add('navbar-light');
       navBar.classList.remove('navbar-dark');
     } else {
+      navBar.classList.remove('navbar-light')
+      navBar.classList.add('navbar-dark')
       if (navBar.classList.contains('scrolled')) {
         navBar.classList.remove('navbar-light');
         navBar.classList.add('navbar-dark');
