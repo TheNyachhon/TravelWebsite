@@ -1,10 +1,98 @@
-<div class="embed-responsive embed-responsive-16by9">
-    <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/89s6vHB6_Gw?controls=0&autoplay=1&mute=1"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe> -->
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/j61j9X4xCnA?controls=0&amp;start=2&autoplay=1&mute=1"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+<div class="container-fluid p-0 videoContainer text-center">
+    <!-- background image and overlay -->
+    <div class="backgroundImage" [ngStyle]="{'background-image':'url('+images[1]+')'}"></div>
+    <div class="overlay"></div>
+    <div class="embed-responsive embed-responsive-16by9 h-100">
+        <iframe src="https://www.youtube-nocookie.com/embed/npNm6dZdjbw?controls=0&amp;start=2&autoplay=1&mute=1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </div>
 </div>
+<!-- <div class="videoTransition"></div> -->
+<div class="container-fluid text-center destination">
+    <div class="title">
+        <h1 class="display-6">Explore Nepal!</h1>
+        <div class="underline"></div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!--  -->
+        <div class="col">
+            <div class="card" (click)="open(Kathmandu)">
+                <img [src]="images[9]" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Kathmandu Valley</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img [src]="images[12]" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Pokhara</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img [src]="images[17]" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Chitwan</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img [src]="images[15]" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Lumbini</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img [src]="images[10]" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Everest</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img [src]="images[16]" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Janakapur</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modals -->
+<!-- Kathmandu valley modal -->
+<!-- <ng-template #Kathmandu let-modal class="modal mt-5">
+    <div class="modalContainer"> -->
+<ng-template #Kathmandu let-modal
+    [ngStyle]="{'display': 'block', 'position': 'fixed', 'top': '50%', 'left': '50%', 'transform': 'translate(-50%, -50%);'}">
+    <div class="modalContainer">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">
+                Kathmandu Valley
+            </h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row content">
+                <div class="col">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt exercitationem quasi,
+                    officia, eaque numquam, necessitatibus expedita officiis corrupti nihil vel distinctio commodi
+                    molestiae repellendus nobis optio labore placeat quaerat.
+                    <a href="#">Read more here</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
+        </div>
+    </div>
+</ng-template>
+<!--  -->

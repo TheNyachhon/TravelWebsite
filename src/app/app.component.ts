@@ -67,6 +67,7 @@ export class AppComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
 
   onWindowScroll() {
+    this.underlineVal = this.checkForActiveLink();
     let navBar = document.querySelector('nav') as HTMLElement;
     // console.log(navBar)
     // console.log(window.pageYOffset)
