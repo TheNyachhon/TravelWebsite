@@ -1,4 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { AuthenticationService } from './authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,21 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'TravelWebsite';
+
+  // login authentication
+  constructor(public authService: AuthenticationService, private router: Router) { }
+
+  checkLoginStatus() {
+    if (this.authService.isAuthenticated() == false) {
+      if ((this.router.url != "/")) {
+        this.router.navigateByUrl("/");
+      }
+    }
+  }
+
+  ngOnInit(): void {
+
+  }
 
   //images
   images = [
@@ -27,12 +44,14 @@ export class AppComponent implements OnInit {
   // navbar
   isCollapsed = false;
 
-
   // line under navigation items
   underlineVal = 0;  //0 means no underline
+  // displays the underline on screen
   showUnderline(index: number) {
     this.underlineVal = index;
   }
+
+  // hides the underline on screen
   hideUnderline(index: number) {
     let navLinks = document.getElementsByClassName('nav-link');
     // checks if any other nav links have active class
@@ -42,14 +61,15 @@ export class AppComponent implements OnInit {
       // it does not have active link, hence the underline is hidden
       this.underlineVal = 0;
     }
+    //settting underline of active link
     this.underlineVal = i;
   }
 
-  checkForActiveLink() :number{
+  checkForActiveLink(): number {
     let navLinks = document.getElementsByClassName('nav-link');
     for (let i = 0; i < 4; i++) {
       if (navLinks[i].classList.contains('active')) {
-        return (i+1);
+        return (i + 1);
       }
     }
     return 0;
@@ -60,14 +80,14 @@ export class AppComponent implements OnInit {
     this.showUnderline(index);
   }
 
-  ngOnInit(): void {
-
+  //constanly checks if we have routed to a different page. If so, the corresponding underline is added
+  assignActiveLink() {
+    this.underlineVal = this.checkForActiveLink();
   }
   // navbar scroll
   @HostListener('window:scroll', ['$event'])
 
   onWindowScroll() {
-    this.underlineVal = this.checkForActiveLink();
     let navBar = document.querySelector('nav') as HTMLElement;
     // console.log(navBar)
     // console.log(window.pageYOffset)
@@ -91,6 +111,20 @@ export class AppComponent implements OnInit {
         }, 200)
       }
     }
+  }
+
+  // login/ registration form display
+  loginFormDisplay: boolean = true;
+  registrationFormDisplay: boolean = false;
+
+
+  displayLoginForm() {
+    this.loginFormDisplay = true;
+    this.registrationFormDisplay = false;
+  }
+  displayRegistationForm() {
+    this.loginFormDisplay = false;
+    this.registrationFormDisplay = true;
   }
 
 }

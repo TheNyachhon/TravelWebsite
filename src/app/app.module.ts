@@ -10,6 +10,7 @@ import { DestinationsComponent } from './destinations/destinations.component';
 import { FestivalsComponent } from './festivals/festivals.component';
 import { TravelTipsComponent } from './travel-tips/travel-tips.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginRegComponent } from './login-reg/login-reg.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ContactComponent } from './contact/contact.component';
     FestivalsComponent,
     TravelTipsComponent,
     ContactComponent,
+    LoginRegComponent
   ],
   imports: [
     BrowserModule,
