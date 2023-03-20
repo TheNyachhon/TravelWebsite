@@ -1,1 +1,33 @@
-<p>travel-tips works!</p>
+<div class="container-fluid travelTipsBanner text-center d-flex flex-column justify-content-center align-items-center">
+    <!-- background image and overlay -->
+    <div class="backgroundImage" [ngStyle]="{'background-image':'url('+images[0]+')'}"></div>
+    <div class="overlay"></div>
+    <!--  -->
+    <div class="title d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 class="display-1">Travel Tips</h1>
+    </div>
+</div>
+<div class="container-fluid tips">
+    <div class="title text-center">
+        <h1 class="display-6">Things to keep in mind!</h1>
+        <div class="underline"></div>
+    </div>
+    <div class="container">
+        <div class="point mb-5" *ngFor="let tip of travelTips">
+            <div class="tipTitle">
+                <h4>{{tip.title}}</h4>
+                <div class="pointLine"></div>
+            </div>
+            <div class="pointDescription">
+                {{tip.content}}
+            </div>
+        </div>
+    </div>
+    <div class="tipsEnding d-flex justify-content-center align-items-center">
+        <div class="line m-2"></div>
+        <div class="text-center">
+            All in all, Hope you have a pleasant stay in Nepal! ♥
+        </div>
+        <div class="line m-2"></div>
+    </div>
+</div>

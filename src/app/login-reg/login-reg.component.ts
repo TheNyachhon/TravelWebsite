@@ -39,9 +39,12 @@ export class LoginRegComponent {
       alert("Please enter both fields!")
     }
     this.authService.isLoggedIn = this.authService.loginUser(this.username,this.password)
+    // this.authService.loginUser returns true if user credentials are correct
     if(this.authService.isLoggedIn==true){
+      // since user is now logged in, they are redirected to the home page
       this.router.navigateByUrl('/Home');
     }else{
+      // if there seems to be an error, an error message pops up
       alert("Invalid credentials!")
     }
   }
@@ -50,7 +53,8 @@ export class LoginRegComponent {
     if(this.authService.registerUser(this.username,this.password)){
       alert("User successfully registered");
     }else{
-      alert("Error!");
+      // Cannot register user again and again
+      alert("Error registering user!");
     }
   }
 
@@ -58,10 +62,13 @@ export class LoginRegComponent {
   displayLogin: boolean = true;
   displayRegistration: boolean = false;
 
+  // displays login form over registration form
   displayLoginForm() {
     this.displayLogin = true;
     this.displayRegistration = false;
   }
+
+  // displays registration form over login form
   displayRegistrationForm() {
     this.displayLogin = false;
     this.displayRegistration = true;
