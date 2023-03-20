@@ -45,6 +45,9 @@ export class LoginRegComponent {
   register(){
     if(this.authService.registerUser(this.username,this.password)){
       alert("User successfully registered");
+      this.username="";
+      this.password="";
+      this.displayLoginForm();
     }else{
       // Cannot register user again and again
       alert("Error registering user!");
