@@ -70,17 +70,6 @@ iframe {
     border-radius: 11% 89% 88% 12% / 48% 25% 75% 52%;
     z-index: -1;
 }
-
-/* cards */
-.card {
-    transition: 500ms all;
-}
-
-.card:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
 /* Modal */
 .modal {
     background-color: red;

@@ -1,0 +1,87 @@
+/* Festival banner */
+.festivalBanner {
+    height: 80vh;
+}
+
+/* Background image */
+.backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    background-size: cover;
+    z-index: -2;
+}
+
+/* Overlay for background image */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.festivalBanner h1 {
+    /* font-family: 'Pacifico', cursive; */
+    /* font-family: 'Indie Flower', cursive; */
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Dancing Script', cursive;
+    color: white;
+}
+
+/* festival content */
+.festival {
+    min-height: 100vh;
+    padding: 0 5rem 5rem;
+}
+
+/* Title - Celebrate with us! */
+/* Content title and underline*/
+.title {
+    margin: 2rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.underline {
+    width: 25%;
+    margin: auto;
+    height: 8px;
+    /* background-color: rgb(252, 191, 70); */
+    background-color: orangered;
+    border-radius: 11% 89% 88% 12% / 48% 25% 75% 52%;
+    z-index: -1;
+}
+
+/* Festival title */
+.festivalsTitle, .eventsTitle{
+    text-align: left;
+    margin:1rem;
+    font-family: 'Indie Flower', cursive;
+    color: rgb(209, 56, 0);
+    font-size: 1.8rem;
+    width: 80%;
+    margin: auto;
+}
+/* Line alongside the title */
+.line{
+    height: 1px;
+    width: 95%;
+    margin: 0 10px;
+    background-color: red;
+}
+/* Events title */
+.eventsTitle{
+    text-align: right;
+}
+
+/* Cards */
+.card{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

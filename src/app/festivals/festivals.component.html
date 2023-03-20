@@ -1,1 +1,132 @@
-<p>festivals works!</p>
+<div class="container-fluid festivalBanner text-center d-flex flex-column justify-content-center align-items-center">
+    <!-- background image and overlay -->
+    <div class="backgroundImage" [ngStyle]="{'background-image':'url('+images[14]+')'}"></div>
+    <div class="overlay"></div>
+    <!--  -->
+    <div class="title d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 class="display-1">Festivals & Events</h1>
+    </div>
+</div>
+<div class="container-fluid text-center festival">
+    <div class="title">
+        <h1 class="display-6">Celebrate with us!</h1>
+        <div class="underline"></div>
+    </div>
+    <div class="container text-center">
+        <!-- Festivals -->
+        <div class="festivalsTitle d-flex align-items-center">
+            Festivals
+            <div class="line"></div>
+        </div>
+        <div class="row content d-flex justify-content-around flex-wrap">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <img [src]="images[18]" class="img-fluid rounded" alt="Tihar">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">Tihar, the festival of lights & colors</h5>
+                            <p class="card-text">The five-day festival of lights, known as Tihar honors Yama, the God of
+                                Death, meanwhile the worship of Laxmi, the Goddess of Wealth dominates the festivities.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Celebrated on - 23rd to 27th Oct</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <img [src]="images[21]" class="img-fluid rounded" alt="Indra Jatra">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">Indra Jatra</h5>
+                            <p class="card-text">This is the exciting festival of chariot processions, masked dances,
+                                religious enactments, lights, color & Living Goddess Kumari as the center of
+                                celebrations.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Celebrated on - 9th Sept</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <img [src]="images[22]" class="img-fluid rounded" alt="Dashain">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">Dashain</h5>
+                            <p class="card-text">A two-week long festival, honoring the Universal Mother Goddess Durga
+                                with prayers, offerings, and pujas. It's a time for
+                                family reunions, gift exchanges, and celebrates the harvest season.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Celebrated on - 26th to 8th Oct</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Events -->
+        <div class="eventsTitle d-flex align-items-center">
+            <div class="line"></div>
+            Events
+        </div>
+        <div class="row content d-flex justify-content-around flex-wrap">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <img [src]="images[24]" class="img-fluid rounded" alt="Tihar">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">Gai Jatra</h5>
+                            <p class="card-text">Gai Jatra is a joyful festival in Kathmandu Valley to honor loved ones
+                                who passed away. It involves dancing, singing, and children dressed as cows parading on
+                                the streets. It usually takes place in July or August.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Celebrated on - Jul / Aug</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <img [src]="images[25]" class="img-fluid rounded" alt="Indra Jatra">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">Mha Puja</h5>
+                            <p class="card-text">Mha Puja is an annual ritual performed by the Newari people of Nepal to
+                                celebrate one’s essence and to cleanse and empower the soul. The day is also celebrated
+                                as Nepal Sambat or the Newari New Year.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Celebrated on - 26th Sept</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                        <img [src]="images[26]" class="img-fluid rounded" alt="Dashain">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">Yomari punhi</h5>
+                            <p class="card-text">Yomari Punhi is an auspicious day for the Newari community. On this day
+                                Kathmandu Valley residents worship Annapurna, the goddess of crops and food, and pray
+                                for a good rice harvest.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Celebrated on - 8th Dec</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
