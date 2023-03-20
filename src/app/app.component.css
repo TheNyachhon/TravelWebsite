@@ -1,6 +1,13 @@
 nav{
     background:none !important;
     z-index: 9999;
+    animation-name: entryNavBar;
+    animation-duration: 500ms;
+}
+@keyframes entryNavBar {
+    0%{
+        transform: translateY(-50%);
+    }
 }
 .navbar-brand{
     margin-left: 30px;

@@ -44,6 +44,13 @@ ngb-alert {
 .title {
     font-family: 'Dancing Script', cursive;
     color: white;
+    animation-name: entryAnimation;
+    animation-duration: 500ms;
+}
+@keyframes entryAnimation {
+    0%{
+        transform: translateY(200%);
+    }
 }
 
 /* title - visit nepal */
@@ -66,6 +73,8 @@ ngb-alert {
 .explore a {
     text-decoration: none;
     color: white;
+    animation-name: entryAnimation;
+    animation-duration: 500ms;
 }
 
 .explore {
@@ -114,7 +123,9 @@ section {
 .content {
     height: 50vh;
 }
-
+.content .row p{
+    text-align: justify;
+}
 .content .col {
     margin: 0 10px;
 }
@@ -288,6 +299,7 @@ footer input {
 .socialMedia i {
     font-size: 2rem;
 }
+
 /* instagram hover */
 .socialMedia a:first-child:hover {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
@@ -307,4 +319,17 @@ footer input {
 .socialMedia a:last-child:hover {
     /* background-color: white; */
     color: #1DA1F2;
+}
+
+/* Responsive */
+@media screen and (max-width: 1000px) {
+    /* title - visit nepal */
+    .title>h1:first-child {
+        font-size: 5rem;
+    }
+
+    /* subtitle - 2023*/
+    .title>h1:last-child {
+        font-size: 4rem;
+    }
 }
