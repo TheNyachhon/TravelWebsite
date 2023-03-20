@@ -14,18 +14,7 @@ export class LoginRegComponent {
   images = [
     "./assets/AerialViewOfKTM.jpg",
     "./assets/boudhaStupa.jpg",
-    "./assets/boudhaStupa2.jpg",
-    "./assets/candles.jpg",
-    "./assets/mangalbazar.jpg",
-    "./assets/mangalbazar2.jpg",
-    "./assets/mangalbazar3.jpg",
-    "./assets/mangalbazar4.jpg",
-    "./assets/mangalbazar5.jpg",
-    "./assets/NationalParkLangtang.jpg",
-    "./assets/pashupati-aarti.jpg",
-    "./assets/pokhara-phewataal.jpg",
-    "./assets/lakhey.jpg",
-    "./assets/lakhey2.jpg",
+    "./assets/boudhaStupa2.jpg"
   ]
 
   username: string = "";
@@ -42,7 +31,11 @@ export class LoginRegComponent {
     // this.authService.loginUser returns true if user credentials are correct
     if(this.authService.isLoggedIn==true){
       // since user is now logged in, they are redirected to the home page
-      this.router.navigateByUrl('/Home');
+      let loginForm = document.querySelector('.form-container') as HTMLElement;
+      loginForm.classList.add('authenticated');
+      setTimeout(()=>{
+        this.router.navigateByUrl('/Home');
+      },500)
     }else{
       // if there seems to be an error, an error message pops up
       alert("Invalid credentials!")

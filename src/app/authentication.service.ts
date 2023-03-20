@@ -39,8 +39,8 @@ export class AuthenticationService {
   }
 
   isAuthenticated(){
-    console.log("logged in status : ")
-    console.log(this.isLoggedIn)
+    // console.log("logged in status : ")
+    // console.log(this.isLoggedIn)
     return this.isLoggedIn;
   }
 }

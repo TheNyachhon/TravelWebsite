@@ -56,3 +56,47 @@ form{
     background-color: #dcdc00;
     border-radius: 11% 89% 88% 12% / 48% 25% 75% 52%;
 }
+
+/* login animation */
+.authenticated{
+    animation-name: goUp;
+    animation-duration: 1s;
+}
+@keyframes goUp {
+    0%{
+
+    }
+    100%{
+        transform: translateY(-200%);
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 1000px) {
+    .loginReg{
+        padding: 8rem;
+    }
+    .form-container{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .form-container{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .loginReg{
+        padding: 5rem;
+    }
+    form h3{
+        font-size: 1.2rem;
+    }
+    form input{
+        font-size: 0.9rem;
+    }
+    .form-container{
+        width: 100%;
+        padding: 0;
+    }
+}
